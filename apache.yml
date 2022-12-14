@@ -2,7 +2,7 @@
 - hosts: webservers
   become: true
   tasks:
-    - name: ""httpd"
+    - name: "httpd"
         state: "present"
     - name: Start Apache server
       service:
