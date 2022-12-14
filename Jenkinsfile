@@ -6,7 +6,7 @@ pipeline{
         
         stage("chckout git repo"){
             steps{
-                git 'https://github.com/eswari795/myapp-ansible.git'
+                git 'https://github.com/eswari795/assignment21.git'
             }
         }
         
