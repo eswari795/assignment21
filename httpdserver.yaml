@@ -3,16 +3,16 @@
   become: True
   tasks:
     - name: Install httpd server
-        apt:
-          name: "httpd"
-          state: "present"
+      apt:
+        name: "httpd"
+        state: "present"
     - name: Start httpd server
-         service:
-            name: httpd
-            state: started
-            enabled: true
+      service:
+         name: httpd
+         state: started
+         enabled: true
     - name: Deploy website
-        copy:
-          src: html/index.html
-          dest: /var/www/html/
+      copy:
+         src: html/index.html
+         dest: /var/www/html/
 ...
