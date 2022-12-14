@@ -2,6 +2,12 @@
 - hosts: webservers
   become: True
   tasks:
+    - name: Update packages
+      apt:
+       update_cache: true
+       upgrade: dist
+       cache_valid_time: 3600
+       force_apt_get: true
     - name: Install httpd server
       apt:
         name: "httpd"
